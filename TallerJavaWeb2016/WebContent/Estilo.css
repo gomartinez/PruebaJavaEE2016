@@ -1,0 +1,86 @@
+@CHARSET "UTF-8";
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #aabcfe;
+/* 	opacity: 0.8; */
+}
+
+li {
+	float: left;
+}
+
+li a {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-weight: bold;
+	display: block;
+	color: #339;
+	text-align: center;
+	padding: 18px;
+	text-decoration: none;
+/* 	opacity: 0.8; */
+}
+
+li a:hover {
+	background-color: #d0dafd;
+/* 	opacity: 0.8; */
+}
+
+table {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+th {
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background: #b9c9fe;
+	border-top: 4px solid #aabcfe;
+	border-bottom: 1px solid #fff;
+	color: #039;
+	
+}
+
+td {
+	padding: 8px;
+	background: #e8edff;
+	border-bottom: 1px solid #fff;
+	color: #669;
+	border-top: 1px solid transparent;
+	
+/* 	opacity: 0.8; */
+}
+
+tr:hover td {
+	background: #d0dafd;
+	color: #339;
+/* 	opacity: 0.8; */
+}
+
+body {
+    background-image: url("peliculas-image.jpg");
+    background-color: #cccccc;
+    background-repeat:no-repeat;
+  	background-size:cover;
+}
+
+input[type=submit] {
+    background-color: #339; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}

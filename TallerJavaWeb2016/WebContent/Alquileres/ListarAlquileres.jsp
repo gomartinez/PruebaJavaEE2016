@@ -1,0 +1,61 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1" import="capa_negocio.*"
+	import="java.util.Enumeration" import="java.util.Iterator"
+	import="java.util.ArrayList" import="java.util.ArrayList"
+	import="java.util.Hashtable" import="java.util.Vector"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="stylesheet" type="text/css"	href="/TallerJavaWeb2016/Estilo.css">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Socios</title>
+</head>
+<body>
+	<ul>
+		<li><a href="/TallerJavaWeb2016/Peliculas/ListarPeliculas.jsp">Peliculas</a></li>
+		<li><a href="/TallerJavaWeb2016/Socios/ListarSocios.jsp">Socios</a></li>
+		<li><a href="/TallerJavaWeb2016/Reservas/ListarReservas.jsp">Reservas</a></li>
+		<li><a href="/TallerJavaWeb2016/Alquileres/ListarAlquileres.jsp">Alquileres</a></li>
+	</ul>
+	<br>
+
+
+	<%
+		Manager_Socio ms = Manager_Socio.getManagerSocio();
+	%>
+
+	<table style="">
+		<tr>
+			<td colspan="2"><a href="/TallerJavaWeb2016/Alquileres/AltaAlquiler.jsp">Agregar</a><br></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table style="width: 100%">
+					<tr>
+						<th>Cod. Pelicula</th>
+						<th>Titulo</th>
+						<th>Nro de Socio</th>
+						<th>Nombre</th>
+					</tr>
+					<%
+						Vector coleccion_alquileres_vector = ms.getColeccionAlquileres();
+						for (Enumeration e = coleccion_alquileres_vector.elements(); e.hasMoreElements();) {
+							DatatypeAlquileres element = (DatatypeAlquileres) e.nextElement();
+					%>
+					<tr>
+						<td><%=element.getCodigo()%></td>
+						<td><%=element.getTitulo()%></td>
+						<td><%=element.getSocio()%></td>
+						<td><%=element.getNombre()%></td>
+					</tr>
+					<%
+						}
+					%>
+
+				</table>
+			</td>
+		</tr>
+		<tr></tr>
+	</table>
+</body>
+</html>

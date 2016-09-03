@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css"
+	href="/TallerJavaWeb2016/Estilo.css">
+<meta charset="UTF-8">
+<title>Registro de Socios</title>
+</head>
+<body>
+	<ul>
+		<li><a href="/TallerJavaWeb2016/Peliculas/ListarPeliculas.jsp">Peliculas</a></li>
+		<li><a href="/TallerJavaWeb2016/Socios/ListarSocios.jsp">Socios</a></li>
+		<li><a href="/TallerJavaWeb2016/Reservas/ListarReservas.jsp">Reservas</a></li>
+		<li><a href="/TallerJavaWeb2016/Alquileres/ListarAlquileres.jsp">Alquileres</a></li>
+	</ul>
+	<br>
+	<form action="/TallerJavaWeb2016/ServletSocios" method="post">
+		<table style="">
+			<tr>
+				<td>Nombre:</td>
+				<td><input type="text" name="nombre" required></td>
+			</tr>
+			<tr>
+				<td>Dirección: </td>
+				<td><input type="text" name="direccion" required></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Confirmar"></td>
+			</tr>
+	</form>
+</body>
+</html>

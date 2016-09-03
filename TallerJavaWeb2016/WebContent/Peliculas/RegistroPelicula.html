@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">        
+function toggle(elemento) {
+    if(elemento.value=="original") {
+        document.getElementById("idEstado").style.display = "none";
+     }else{
+         if(elemento.value=="copia"){
+             document.getElementById("idEstado").style.display = "table-row";
+          }
+      }
+}
+    </script>
+<head>
+<link rel="stylesheet" type="text/css"
+	href="/TallerJavaWeb2016/Estilo.css">
+<meta charset="UTF-8">
+<title>Registro de Peliculas</title>
+</head>
+<body>
+	<ul>
+		<li><a href="/TallerJavaWeb2016/Peliculas/ListarPeliculas.jsp">Peliculas</a></li>
+		<li><a href="/TallerJavaWeb2016/Socios/ListarSocios.jsp">Socios</a></li>
+		<li><a href="/TallerJavaWeb2016/Reservas/ListarReservas.jsp">Reservas</a></li>
+		<li><a href="/TallerJavaWeb2016/Alquileres/ListarAlquileres.jsp">Alquileres</a></li>
+	</ul>
+	<br>
+	<form action="/TallerJavaWeb2016/ServletPeliculas" method="post">
+		<table style="">
+			<tr>
+				<td >
+					Título:
+				</td>
+				<td >
+					<input type="text" name="titulo">
+				</td>
+			</tr>
+			<tr>
+				<td >
+				Actores:
+				</td>
+				<td>
+					<input type="text"name="actores"> 
+				</td>
+			</tr>
+			<tr>
+				<td >
+				Género: 								
+				</td>
+				<td>
+				<input type="text" name="genero"> 								
+				</td>
+			</tr>			
+			<tr>
+				<td>
+				Tipo: 
+				</td>
+				<td>
+				<input type="radio" name="tipo" value="original" onclick="toggle(this)"> Original 
+				<input type="radio" name="tipo" value="copia"onclick="toggle(this)"> Copia
+				</td>
+			</tr>
+				
+					
+			<tr id="idEstado" style="display: none;">
+				<td >
+					Estado: 
+				</td>
+				<td>
+					<select name="estado">
+						<option value="bueno">Bueno</option>
+						<option value="muyBueno">Muy Bueno</option>
+						<option value="excelente">Excelente</option>
+					</select>
+<!-- 				</div> -->
+				</td>
+			</tr>		
+			<tr>
+				<td colspan="2">
+				<input type="submit" value="Confirmar">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
