@@ -43,6 +43,7 @@ public class ServletAlquiler extends HttpServlet {
 		Manager_Socio ms =  Manager_Socio.getManagerSocio();
 		ms.alta_Alquiler(nro_soc, codigo);
 
+		
 		request.getRequestDispatcher("/Alquileres/ListarAlquileres.jsp").forward(request, response);
 	}
 
